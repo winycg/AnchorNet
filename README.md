@@ -81,7 +81,8 @@ python train_downnet_patch.py \
 
 Make two tables named "threshold" and "predictions", the size of them is N * top_k, where N is the number of test images, top_k is the patch number of an image.
 
-An example of the threshold table, where the value denotes the confidence
+An example of the threshold table, where the value denotes the confidence of ensemble logits from top_k patches
+
 | Sample | 1 | 2 | ... | top_k |
 | -- | -- | -- | -- | -- |
 | 1 |0.56 |0.77|...|0.85 |
@@ -89,7 +90,7 @@ An example of the threshold table, where the value denotes the confidence
 | ... | ... |... |... |... |
 | 50K | 0.34|0.43|... |0.55 |
 
-An example of the predictions table, where the value denotes the predicted class label
+An example of the predictions table, where the value denotes the predicted class label according to the ensemble logits
 | Sample | 1 | 2 | ... | top_k |
 | -- | -- | -- | -- | -- |
 | 1 |2 |1|...|1 |
@@ -111,13 +112,14 @@ python make_table.py \
 ```
 
 dynamic inference under various thresholds:
+
 ```
 python dynamic_inference.py \
     --arch densenet201 \
     --table-file ./result/densenet201_95_0.3_0.pth
 ```
 
-You can modify the `all_predefined_thresholds` to control various thresholds.
+You can modify the `all_predefined_thresholds` to control various thresholds. Some datapoint examples are shown in [densenet_acc_flops.txt](https://github.com/winycg/AnchorNet/blob/main/result/densenet_acc_flops.txt).
 
 
 ### Visualize the localized patches
