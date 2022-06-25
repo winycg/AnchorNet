@@ -3,6 +3,9 @@
 
 This project provides source code for our Localizing Semantic Patches for Accelerating Image Classification.
 
+<a href="https://replicate.com/winycg/anchor_net"><img src="https://replicate.com/winycg/anchor_net/badge"></a>
+
+
 ## Installation
 
 ### Requirements
