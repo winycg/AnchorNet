@@ -3,6 +3,11 @@
 
 This project provides source code for our Localizing Semantic Patches for Accelerating Image Classification.
 
+Our paper is available at https://arxiv.org/pdf/2206.03367.pdf
+
+
+Thank @ariel415el to provide an interactive demo for our work! The demo is available at:
+
 <a href="https://replicate.com/winycg/anchor_net"><img src="https://replicate.com/winycg/anchor_net/badge"></a>
 
 
