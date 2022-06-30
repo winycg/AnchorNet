@@ -145,6 +145,8 @@ python visualize.py --topk 1 \
 | -- |
 | ![top2](figs/top2.png) |
 
+
+## Citation
 ```
 @inproceedings{yang2022localizing,
   title={Localizing Semantic Patches for Accelerating Image Classification},
